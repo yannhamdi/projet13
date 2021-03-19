@@ -14,13 +14,27 @@ def get_json():
     'x-rapidapi-key': api_key,
     'x-rapidapi-host': "imdb8.p.rapidapi.com"
     }
+    url_2 =  "https://movie-database-imdb-alternative.p.rapidapi.com/"
+    headers_2 = {
+    'x-rapidapi-key': "5a6cbea49emsh1903f35a2f6aaa7p18cb91jsnb0ae31cdaa93",
+    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
+    }
+
              
     response = requests.request("GET", url, headers=headers)
     movies = []
     if response.status_code == 200:
-        movies = response.json()[0]['id']
-        print(movies)
-    print("erreur")
+        movies = response.json()[0]['id'][7:16]
+    for i in range(0,1):
+        querystring = {"i":str(movies),"r":"json"}
+        response_2 = requests.request("GET", url_2, headers=headers_2, params=querystring)
+        movies_details = []
+        movies_details = response_2.json()
+        print(movies_details)
+
+    
+
+    
     
 
 
