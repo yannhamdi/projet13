@@ -16,7 +16,7 @@ def get_json():
     }
     url_2 =  "https://movie-database-imdb-alternative.p.rapidapi.com/"
     headers_2 = {
-    'x-rapidapi-key': "5a6cbea49emsh1903f35a2f6aaa7p18cb91jsnb0ae31cdaa93",
+    'x-rapidapi-key': api_key,
     'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
     }
 
