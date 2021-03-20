@@ -20,14 +20,7 @@ def get_json():
         movies_release_date.append((movies["results"][i]["release_date"]))
     print(movies_title)
     print(movies_release_date)
-    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
-
-    querystring = {"i":"tt0109830","r":"json"}
-
-    headers = {
-    'x-rapidapi-key': api_key,
-    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
-    }
+    
 
     response = requests.request("GET", url, headers=headers, params=querystring)
     movies_details = []
@@ -44,6 +37,14 @@ def get_json():
     if response_2.status_code == 200:
         response_details = response_2.json()["Search"][0]["imdbID"]
         print(response_details)
+    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
+
+    querystring = {"i":"tt0109830","r":"json"}
+
+    headers = {
+    'x-rapidapi-key': api_key,
+    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
+    }
     
     
     
