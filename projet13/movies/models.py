@@ -1,5 +1,4 @@
 from django.db import models
-from .managers import MovieManager
 
 
 class Category(models.Model):
@@ -30,4 +29,4 @@ class Movie(models.Model):
     def __str__(self):
         return self.movie_title
 
-    objects = MovieManager()
+  
