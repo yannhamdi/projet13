@@ -24,7 +24,7 @@ class Movie(models.Model):
     image_movie = models.URLField(max_length=255)
     plot = models.TextField()
     category = models.ManyToManyField("Category", related_name="movies")
-    actor = models.ManyToManyField("Actor", related_name="movies")
+    actor = models.ManyToManyField("Actor", related_name="movie")
 
     def __str__(self):
         return self.movie_title

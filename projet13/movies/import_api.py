@@ -4,7 +4,6 @@ import requests
 
 import os
 
-import random
 import imdb
 
 api_key = os.environ.get("API_IMDB")
@@ -26,17 +25,16 @@ def get_json():
     }
     movies_title = []
     movies_id = []
-    movies_details = []
-    for num_page in range(1, 20):
+    movies_details = {}
+    movies_results = []
+    for num_page in range(1,350):
         response = requests.get("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_movie_db + "&language=en-US&page=" + str(num_page))
         movies = []
         movies = response.json()
         for i in range(0, (len(movies["results"]))):
-            movies_title.append(((movies["results"][(random.randint(0, len((movies["results"])))-1)]["title"])))
+            movies_title.append(((movies["results"][i]["title"])))
         movies_title_no = set(movies_title)
         movies_title_no = list(movies_title_no)
-        print(len(movies_title_no))
-        print(movies_title_no)
         for j in range(0, len(movies_title_no)):
             try:
                 ia = imdb.IMDb()
@@ -44,22 +42,34 @@ def get_json():
                 movies_id.append(search[0].movieID)
             except:
                 print(movies_title_no[j])
-        h = 0
-        movies_details = []
-        for h in range(0, len(movies_id)):
-            querystring_2 = {"i": "tt" + str(movies_id[h]),"r":"json"}
-            response_3 = requests.request("GET", url, headers=headers, params=querystring_2) 
+        for h in range(0,len(movies_id)):
+            search_details = ia.get_movie(movies_id[h])
             try:
-                movies_details.append(response_3.json())
-            except:
-                print(movies_id)
-                continue
-    print(len(movies_details))
-       
-def main():
-    get_json()
+                movies_details['id_code'] = movies_id[h]
+                movies_details['movie_title'] = search_details['title']
+                movies_details['run_time'] = search_details['runtimes']
+                movies_details['movie_released'] = search_details['year']
+                movies_details['image_movie'] = search_details['cover url']
+                movies_details['plot'] = search_details['plot'][0]
+                movies_details['genres'] = search_details['genres']
+                movies_details['cast'] = str((search_details['cast'][0]))
+                movies_details['cast'] +=  ", " + str((search_details['cast'][1]))
 
-main()
+                movies_results.append(movies_details)
+                movies_details = {}
+                
+            except Exception as e:
+                print("notre resultat")
+                print(len(movies_results))
+                print(movies_id[h])
+                print("error: %s" % e)
+                continue
+        print(len(movies_results))
+        movies_id = []
+        movies_title = []
+        movies_title_no = []
+    return movies_results
+       
 
 
 
