@@ -19,6 +19,6 @@ class TestImdbApi(TestCase):
               }]
               }
         
-        mov = imdb_api()
+        mov =imdb_api()
         self.assertEqual(len(mov), 1)
           

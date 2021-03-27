@@ -17,14 +17,14 @@ def get_json():
     movies_id = []
     movies_details = {}
     movies_results = []
-    for num_page in range(1,200):
+    for num_page in range(1,2):
         response = requests.get("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_movie_db + "&language=en-US&page=" + str(num_page))
         movies = []
-        movies = response.json()
-        for i in range(0, (len(movies["results"]))):
-            movies_title.append(((movies["results"][i]["title"])))
-        movies_title_no = set(movies_title)
-        movies_title_no = list(movies_title_no)
+        movies = response.json()["results"]
+        for element in movies:
+            movies_title.append(element["title"])
+            movies_title_no = set(movies_title)
+            movies_title_no = list(movies_title_no)
         for j in range(0, len(movies_title_no)):
             try:
                 ia = imdb.IMDb()
@@ -59,7 +59,11 @@ def get_json():
         movies_title = []
         movies_title_no = []
     return movies_results
-       
+
+
+def main():
+    get_json()
+main()
 
 
 
