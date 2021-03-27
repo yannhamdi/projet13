@@ -54,7 +54,6 @@ class Command(BaseCommand):
                 u = Actor.objects.get(act=t)
                 movie.actor.add(u)
                 movie.save()
-            print(movie)
         
     def delete_all(self):
         Movie.objects.all().delete()

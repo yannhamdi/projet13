@@ -1,24 +1,24 @@
-
 from django.test import TestCase
-from unittest.mock import patch, MagicMock
-from mmovies.import_api import get_json
+from unittest.mock import patch, Mock
+from movies.imdb_api import imdb_api
 import requests
+import imdb
+import os
 
-class TestImportApi(TestCase):
+api_movie_db = os.environ.get("API_MOVIE_DB")
+
+class TestImdbApi(TestCase):
     @patch('requests.get')
-    def test_get_json(self,mockget_json):
-        mockget_json.return_value.json.return_value ={
-        "products": [
-          { "code": 122233,
-                "product_name": "pizzas",
-                "nutrition_grade_fr": "a",
-                "url": "www.dkdjkdjd.com",
-                "image_url": "www.image.fr"
+    def test_imdb_api(self,mock_get_json):
+        mock_get_json.return_value.json.return_value ={
+        "results": [
+          { "title": "die hard"
+              
 
 
               }]
               }
-        mockget_json.return_value.status_code = 200
-        prod = get_json(category)
-        self.assertEqual(len(prod),1)
+        
+        mov = imdb_api()
+        self.assertEqual(len(mov), 1)
           

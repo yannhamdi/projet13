@@ -1,8 +1,9 @@
 """ module that import products from imdb api"""
+import os
 
 import requests
 
-import os
+
 
 import imdb
 
@@ -12,17 +13,6 @@ api_movie_db = os.environ.get("API_MOVIE_DB")
 
 def get_json():
     """method that look for best rated movies api"""
-
-    url = "https://movie-database-imdb-alternative.p.rapidapi.com/"
-    headers = {
-    'x-rapidapi-key': api_key,
-    'x-rapidapi-host': "movie-database-imdb-alternative.p.rapidapi.com"
-    }
-    url_2 = "https://imdb8.p.rapidapi.com/title/find"
-    headers_2 = {
-    'x-rapidapi-key': api_key,
-    'x-rapidapi-host': "imdb8.p.rapidapi.com"
-    }
     movies_title = []
     movies_id = []
     movies_details = {}
