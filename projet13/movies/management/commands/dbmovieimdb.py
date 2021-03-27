@@ -49,7 +49,7 @@ class Command(BaseCommand):
                 movie.save()
                 person = ((element["cast"]).split(","))
             for pers in person:
-                t = (pers.lower()).strip()
+                t = pers.strip()
                 self.saving_actor(t)
                 u = Actor.objects.get(act=t)
                 movie.actor.add(u)

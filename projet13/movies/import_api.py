@@ -17,7 +17,7 @@ def get_json():
     movies_id = []
     movies_details = {}
     movies_results = []
-    for num_page in range(1,350):
+    for num_page in range(1,200):
         response = requests.get("https://api.themoviedb.org/3/movie/top_rated?api_key=" + api_movie_db + "&language=en-US&page=" + str(num_page))
         movies = []
         movies = response.json()
