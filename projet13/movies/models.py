@@ -1,6 +1,6 @@
 """create models for database"""
 from django.db import models
-from .managers import ProductManager
+from .managers import ProductManager, ActorManager
 
 
 class Category(models.Model):
@@ -16,6 +16,7 @@ class Actor(models.Model):
 
     def __str__(self):
         return self.act
+    objects = ActorManager()
 
 class Movie(models.Model):
     """ we class the model for each products"""
