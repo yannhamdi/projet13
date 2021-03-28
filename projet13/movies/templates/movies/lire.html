@@ -1,0 +1,6 @@
+<h3> Titre du film </h3> {{movie.movie_title}}
+<h3> Durée du film </h3> {{movie.run_time}}
+<h3> Année du film </h3>{{movie.movie_released}}
+<h3> Résumé </h3> {{movie.plot}}
+<h3> Acteurs </h3> {% for actor in movie.actor.all %}{{actor}} <br//>{% endfor %}
+<p><img src= {{ movie.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>

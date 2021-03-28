@@ -1,0 +1,18 @@
+{% for movie in page_obj %}
+ <h3> Titre du film </h3>
+                        <p><a  href="{% url 'lire' movie.id_code %}"> {{movie.movie_title}}</a></p>
+                        <p><img src= {{ movie.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
+
+                                             {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+{% endif %}
+ {% endfor %} 
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
