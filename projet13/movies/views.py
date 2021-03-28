@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.urls import reverse
 from django.core.paginator import Paginator
 
+from .forms import ProductSearch
 from movies.models import Movie
 
 def index(request):
@@ -14,6 +15,23 @@ def index(request):
 
 def lire(request, id):
     movie = get_object_or_404(Movie.objects.filter(id_code=id))
-    cast = movie.actor.all()
     return render(request, 'movies/lire.html',
-                  {'movie': movie, 'cast': cast})
+                  {'movie': movie})
+def home(request):
+    form = ProductSearch(request.POST or None)
+    context = {'form': form}
+    return render(request, 'movies/home.html', context)
+
+
+def search(request):
+    form = ProductSearch(request.POST or None)
+    if form.is_valid():
+        prod = form.cleaned_data['search']
+        search_sub = Movie.objects.search_movie_title(prod)
+        if search_sub:
+        	return redirect(reverse('lire',
+                                    args=[int(search_sub['id_code'])
+                                          ]))
+                                     
+        return render(request, 'movies/no_response.html', {'form': form})
+    return render(request, 'movies/search.html', locals())
