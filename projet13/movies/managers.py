@@ -22,7 +22,10 @@ class ActorManager(models.Manager):
         return None
 
 
-
+class GenreManager(models.Manager):
     def search_movie_genre(self, search_genre):
         """the method that will make a request by genre"""
-        movie_id_by_genre = self.filter(cat__icontains=search_entry)
+        movie_id_by_genre = self.filter(cat__icontains=search_genre)
+        if movie_id_by_genre:
+            return movie_id_by_genre
+        return None

@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.core.paginator import Paginator
 
 from .forms import ProductSearch
-from movies.models import Movie, Actor
+from movies.models import Movie, Actor, Category
 
 def index(request):
     list_movie = Movie.objects.all()
@@ -33,6 +33,14 @@ def search(request):
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
             return render(request, 'movies/index.html', {'page_obj': page_obj})
+        
+        list_movie_cat = Category.objects.search_movie_genre(prod)
+        if list_movie_cat:
+            list_movie_by_cat = Movie.objects.filter(category__in=list_movie_cat)	
+            paginator = Paginator(list_movie_by_cat, 10)
+            page_number = request.GET.get('page')
+            page_obj = paginator.get_page(page_number)
+            return render(request, 'movies/index.html', {'page_obj': page_obj})
         list_movie_actor  = Actor.objects.search_movie_actor(prod)      
         if list_movie_actor:
             list_movie_by_actor  = Movie.objects.filter(actor__in=list_movie_actor)
@@ -41,8 +49,7 @@ def search(request):
             page_number = request.GET.get('page')
             page_obj = paginator.get_page(page_number)
             return render(request, 'movies/index.html', {'page_obj': page_obj})
-        	
-        return render(request, 'movies/no_response.html', {'form': form})
+        return render(request, 'movies/no_response.html')
     return render(request, 'movies/search.html', locals())
 
 

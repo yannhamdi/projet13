@@ -1,6 +1,6 @@
 """create models for database"""
 from django.db import models
-from .managers import ProductManager, ActorManager
+from .managers import ProductManager, ActorManager, GenreManager
 
 
 class Category(models.Model):
@@ -9,7 +9,7 @@ class Category(models.Model):
 
     def __str__(self):
         return self.cat
-
+    objects = GenreManager()
 class Actor(models.Model):
     """we create the name for each categories"""
     act = models.CharField(max_length=100, unique=True)
