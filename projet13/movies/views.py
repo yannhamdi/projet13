@@ -24,7 +24,7 @@ def home(request):
 
 
 def search(request):
-    if not request.method == 'POST':
+    if not request.method == 'POST' and 'page' in request.GET:
         if 'search' in request.session:
             print('search get')
             request.POST = request.session['search']
