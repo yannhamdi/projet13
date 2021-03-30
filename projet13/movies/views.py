@@ -40,8 +40,8 @@ def search(request):
             page_number = request.GET.get('page')
             page_obj = paginator_1.get_page(page_number)
         
-    else:
-        return render(request, 'movies/search.html', locals())
-    
+        form = ProductSearch()
+        return render(request, 'movies/search.html', {'form': form})
+    return render(request, 'movies/index.html', {'page_obj': page_obj})
     
     
