@@ -1,11 +1,13 @@
-from django.urls import path
-
+from django.urls import path, reverse, include
 from . import views
+from django.conf import settings
 
 urlpatterns = [
-    path('movie/<int:id>', views.lire, name='lire'),
-    path('home', views.home, name='home'),
-    path('search', views.search, name='search'),
-    path('display_all', views.display_all, name='display_all'),
+path('signup/', views.signup, name="signup"),
+path('movies/', include('movies.urls')),
+path('signin/', views.signin, name="signin"),
+ path('account/', views.account, name="account"),
+path("signout/", views.signout, name="signout"),
+path("change_password/", views.change_password, name="change_password"),
 
 ]
