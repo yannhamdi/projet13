@@ -10,6 +10,8 @@ class Category(models.Model):
     def __str__(self):
         return self.cat
     objects = GenreManager()
+
+
 class Actor(models.Model):
     """we create the name for each categories"""
     act = models.CharField(max_length=100, unique=True)
@@ -17,6 +19,7 @@ class Actor(models.Model):
     def __str__(self):
         return self.act
     objects = ActorManager()
+
 
 class Movie(models.Model):
     """ we class the model for each products"""
@@ -33,4 +36,3 @@ class Movie(models.Model):
         return self.movie_title
 
     objects = ProductManager()
-        
