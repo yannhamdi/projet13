@@ -30,6 +30,9 @@ class MoviesView(TestCase):
     def test_home(self):
         response = self.client.get(reverse('home'))
         self.assertEqual(response.status_code, 200)
+    def test_display_all(self):
+        response = self.client.get(reverse('display_all'))
+        self.assertEqual(response.status_code, 200)
     def test_search(self):
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
