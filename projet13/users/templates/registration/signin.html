@@ -1,0 +1,11 @@
+                    <form action="{% url 'signin' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input id="go" type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+
+
+
+
+<a href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a><br>
+<a href="{% url 'password_reset' %}"> Mot de passe oublié </a>
