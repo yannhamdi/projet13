@@ -6,7 +6,11 @@
                           <h3> Titre film</h3>
                         <p><a class=" mb-4" style="display: block; color: #E8A75D;" href="{% url 'lire' movie.id_code %}">{{movie.movie_title }}</a></p>
                         <p><img src= {{ movie.image_movie}} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
-                    
+                       
+                 {% if user.is_authenticated  %}       
+                <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' movie.id_code %}">
+                  <button type="submit"> Sauvegardez votre recherche </button>
+                 {% endif %}
                      
         
 

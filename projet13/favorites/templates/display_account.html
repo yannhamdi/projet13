@@ -1,0 +1,27 @@
+ {% for favorite in page_obj %}
+                    <div class="results col-md-4 col-sm-6">
+                          <h3 class=" mb-4" style="display: block; color: #E8A75D;"> Films recherchés </h3>
+                        <p><a class=" mb-4" style="display: block; color: #E8A75D;" href="{% url 'lire' favorite.movie_saved.id_code %}">{{favorite.movie_saved.movie_title }}</a></p>
+                        <p><img src= {{ favorite.movie_saved.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
+
+
+        
+{% empty %}
+         <h1 class=" mb-4 col-12 text-center" style="color: #E8A75D;">Aucun article.</h1>
+                     {% endfor %} 
+                    </div>
+                    <div class="pagination">
+                        <span class="step-links">
+                           {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+{% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
