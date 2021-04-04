@@ -61,3 +61,8 @@ def search(request):
     else:
         form = ProductSearch()
         return render(request, 'movies/search.html', {'form': form})
+
+def mention(request):
+    form = ProductSearch(request.POST or None)
+    context = {'form': form}
+    return render(request, "movies/mentions_legales.html", context)
