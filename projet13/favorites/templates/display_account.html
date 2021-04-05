@@ -9,7 +9,7 @@
                     <div class="col-lg-8 ">
                         <div class="account">
                                 
-                            <h1 class="text-uppercase" style="color:#E8A75D;">Vos recherches</h1>
+                            <h1 class="text-uppercase" style="color:#b8001e;">Vos films préférés</h1>
                             <hr class="divider my-4" />
                         </div>
                     </div>
@@ -24,8 +24,8 @@
                     <div class="row" style="margin-left: 15px;">
  {% for favorite in page_obj %}
                     <div class="results col-md-4 col-sm-6">
-                           <h3> Titre </h3>
-                        <p><a  style="display:inline; color: #E8A75D;"href="{% url 'lire' favorite.movie_saved.id_code %}" >{{favorite.movie_saved.movie_title }}</a>
+                           <h4> Titre </h4>
+                        <p><a  style="display:inline; color: #7d7772;"href="{% url 'lire' favorite.movie_saved.id_code %}" >{{favorite.movie_saved.movie_title }}</a>
                        <p> <img src= {{ favorite.movie_saved.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
 
 

@@ -1,6 +1,8 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Liste {% endblock title %}
 
-
-
+{% block header %}
                       {% for movie in page_obj %}
                     
                           <h3> Titre film</h3>
@@ -39,3 +41,4 @@
     </span>
 </div> </div>
 </section>
+{% endblock header %}
