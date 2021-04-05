@@ -24,12 +24,12 @@
                     <div class="row" style="margin-left: 15px;">
  {% for favorite in page_obj %}
                     <div class="results col-md-4 col-sm-6">
-                           <h3> Films </h3>
+                           <h3> Titre </h3>
                         <p><a  style="display:inline; color: #E8A75D;"href="{% url 'lire' favorite.movie_saved.id_code %}" >{{favorite.movie_saved.movie_title }}</a>
-                        <img src= {{ favorite.movie_saved.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
+                       <p> <img src= {{ favorite.movie_saved.image_movie }} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
 
 
- 
+ </div>
         
 {% empty %}
          <h1 class=" mb-4 col-12 text-center" style="color: #E8A75D;">Aucun article.</h1>
