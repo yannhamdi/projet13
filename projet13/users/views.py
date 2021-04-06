@@ -34,7 +34,7 @@ def signin(request):
             user = auth.authenticate(username=username, password=password)
             if user:
                 auth.login(request, user)
-                nextt = request.GET.get('next', 'search')
+                nextt = request.GET.get('next', 'home')
                 if nextt:
                     return redirect(nextt)
     else:

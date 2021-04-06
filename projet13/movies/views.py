@@ -6,11 +6,12 @@ from movies.models import Movie, Actor, Category
 
 def display_all(request):
     """views that displays the whole database"""
+    form = ProductSearch()
     all_movie = Movie.objects.all()
     paginator = Paginator(all_movie, 10)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'movies/index.html', {'page_obj': page_obj})
+    return render(request, 'movies/index.html', {'page_obj': page_obj, 'form':form})
     
 def lire(request, id):
     movie = get_object_or_404(Movie.objects.filter(id_code=id))
@@ -44,18 +45,18 @@ def search(request):
                 paginator_1 = Paginator(list_movie_actor, 10)
                 page_number = request.GET.get('page')
                 page_obj = paginator_1.get_page(page_number)
-                return render(request, 'movies/index.html', {'page_obj': page_obj})
+                return render(request, 'movies/index.html', {'page_obj': page_obj, 'form': form})
             if list_movie_cat:
                 list_movie_by_cat = Movie.objects.filter(category__in=list_movie_cat)
                 paginator = Paginator(list_movie_by_cat, 10)
                 page_number = request.GET.get('page')
                 page_obj = paginator.get_page(page_number)
-                return render(request, 'movies/index.html', {'page_obj': page_obj})
+                return render(request, 'movies/index.html', {'page_obj': page_obj, 'form': form})
             if search_sub:
                 paginator = Paginator(search_sub, 10)
                 page_number = request.GET.get('page')
                 page_obj = paginator.get_page(page_number)
-                return render(request, 'movies/index.html', {'page_obj': page_obj})
+                return render(request, 'movies/index.html', {'page_obj': page_obj, 'form': form})
             return render(request, 'movies/no_response.html')
 
     else:

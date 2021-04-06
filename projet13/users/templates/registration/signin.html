@@ -1,3 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Signin{% endblock title %}
+ {% block nav %}
+           <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+                       <i class="fas fa-video"></i> L'encyclopédie des films</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  
+                </div>
+            </nav>
+        {% endblock nav %}
+    
+  {% block header %} 
+  <header class="masthead" style="background: #e4e3d1;">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-10 align-self-end">
+                        <hr class="divider my-4" />
+                    </div>
+                    <div class="col-lg-8 align-self-baseline">
+
+
                     <form action="{% url 'signin' %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
@@ -7,5 +31,16 @@
 
 
 
-<a href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a><br>
-<a href="{% url 'password_reset' %}"> Mot de passe oublié </a>
+<a  style="color:white;" href="{% url 'signup' %}"> Nouvel utilisateur? Inscrivez-vous ici </a><br>
+<a style="color:white;" href="{% url 'password_reset' %}"> Mot de passe oublié </a>
+
+</form>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    {% endblock header %}
+
+      
+
