@@ -23,11 +23,11 @@
       
 
  {% block content %}
-      <h1 class="text-uppercase color-writing" style="color:#E8A75D"> {{movie.movie_released}}</h1>
-                          <h1 class="text-uppercase color-writing" style="color:#E8A75D"> {{movie.run_time}}</h1>
+      <h1 style="color:#E8A75D">  Année de réalisation  du film {{movie.movie_released}}</h1>
+                          <h1 class="text-uppercase color-writing" style="color:#E8A75D">Durée du film {{movie.run_time}}</h1>
                            <h1 class="text-uppercase color-writing" style="color:#E8A75D"> {{movie.id_code}}</h1>
                             <h1 class="text-uppercase color-writing" style="color:#E8A75D"> {% for actor in movie.actor.all %}{{actor}} <br//>{% endfor %}</h1>
-                             <div class="col-12 d-flex justify-content-center align-items-center m-5" ><a href="https://www.imdb.com/title/tt{{movie.id_code}}" class="color-writing" style="color:#E8A75D;">Consulter le film sur imd</a></div>
+                             <div class="col-12 d-flex justify-content-center align-items-center m-5" ><a href="https://www.imdb.com/title/tt{{movie.id_code}}" class="color-writing" style="color:#E8A75D;">Consulter le film sur imdb</a></div>
                           
 </div>
     </div>
