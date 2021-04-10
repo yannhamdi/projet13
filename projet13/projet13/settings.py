@@ -15,7 +15,6 @@ import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 import dj_database_url
 
 # ...
@@ -146,12 +145,10 @@ if os.environ.get('ENV') == 'PRODUCTION':
         # https://warehouse.python.org/project/whitenoise/
         STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static")),
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')],
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__)),
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles'),
 
 if os.environ.get('ENV') == 'PRODUCTION':
 
