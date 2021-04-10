@@ -31,7 +31,7 @@ DEBUG = False if os.getenv("ENV") == "DEVELOPMENT" else True
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["p13-yh.herokuapp.com"]
+ALLOWED_HOSTS = ["https://p13-yh.herokuapp.com/"]
 
 
 # Application definition
