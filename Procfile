@@ -1,0 +1,1 @@
+web:gunicorn projet13.wsgi --log-file -
