@@ -157,10 +157,4 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = False
-else:
-    DEBUG = True
-if os.environ.get('ENV') == 'PRODUCTION':
     django_heroku.settings(locals())
-
-
