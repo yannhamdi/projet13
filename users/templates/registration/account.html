@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+ {% block title %} Compte utilisateur {% endblock title %}
+   {% block nav %}
+           <!-- Navigation-->
+           <div class="nav-color" >
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color:grey; z-index: 2;">
+                <div class="container">
+                    <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+                     <i class="fas fa-video"></i> L'encyclopédie des films</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+
+                            <li class="nav-item"><form action="{% url 'search' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+</form> </li>
+
+                            {% if not user.is_authenticated  %}
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signin' %}"> <i class="fas fa-sign-in-alt"></i></a></li>
+                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_all' %}"><i class="fas fa-file-video"></i></a></li>
+
+                            {% endif %}
+                            {% if user.is_authenticated  %}
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'account' %}"> <i class="fas fa-user"></i></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_account' %}"> <i class="fas fa-film"></i></a></li>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'signout' %}"><i class="fas fa-user-alt-slash"></i></a></li>
+                             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'display_all' %}"><i class="fas fa-file-video"></i></a></li>
+
+                            
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        {% endblock nav %}
+ {% block header %}
+
+             <header class="masthead" style="background-image: url({% static 'img/bg-account.jpg' %}); height:200px;">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-12 ">
+                        <div class="account" >
+                                
+                        <h1 class="text-uppercase" style="color:black;">Welcome to {{ user.first_name }} world !!!!!</h1>
+                        <hr class="divider my-4" />
+                    </div>
+                </div>
+               </div>
+               </div>
+                
+            </div>
+        </header>
+        {% endblock header %}
+
+        {% block content %}
+        <div class="email" style="height:500px; padding-top: 50px;padding-bottom: 50px;">
+            <div class="col-lg-12">
+         <h2 class="mail" style="color:black;">Votre adresse email est {{ user.email}}</h2>
+         <a href="{% url 'change_password' %}" class="mail" style="color:black;" >Change your password</a>
+     </div>
+ </div>
+        {% endblock content %}
