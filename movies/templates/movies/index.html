@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Liste {% endblock title %}
+{% block header %}
+
+             <header class="masthead" style="background-image: url({% static 'img/results.jpg' %}); height:80px;">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 ">
+                        <div class="account">
+                                
+                            <h1 class="text-uppercase" style="color:#b8001e;">Résultats de la recherche</h1>
+                            <hr class="divider my-4" />
+                        </div>
+                    </div>
+                 </div>
+                </div>
+                
+           
+            </header>
+{% endblock header %}
+
+{% block content %}
+  <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
+ <div class="row" style="margin-left: 15px;">
+                       {% for movie in page_obj %}
+                       {% if user.is_authenticated  %}   
+                      
+                          <div class="results col-md-4 col-sm-6">
+                          <h4> Titre film</h4>
+                        <p><a class=" mb-4" style="display: inline; color:  #47422c;" href="{% url 'lire' movie.id_code %}">{{movie.movie_title }}</a></p>
+                        <p><img src= {{ movie.image_movie}} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
+                   
+                <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' movie.id_code %}"> 
+                  <button type="submit"> Sauvegardez </button> </a></h4> </div>
+                
+                      {% else%} 
+                      
+         <div class="results col-md-4 col-sm-6">
+                          <h4> Titre film</h4>
+                        <p><a class=" mb-4" style="display: inline; color:  #47422c;" href="{% url 'lire' movie.id_code %}">{{movie.movie_title }}</a></p>
+                        <p><img src= {{ movie.image_movie}} style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
+                   
+                </div>
+               {% endif %}
+  
+        
+{% empty %}
+         <h1>Aucun article.</h1>
+                     {% endfor %} 
+
+                  
+                    <div class="pagination">
+                        <span class="step-links">
+                           {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+{% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div> </div> 
+</section>
+{% endblock content %}
