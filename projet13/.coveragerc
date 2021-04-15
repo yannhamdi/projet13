@@ -1,7 +1,0 @@
-[run]
-
-omit =
-    projet13/*
-    */tests/*
-    */__init__.py
-    manage.py
