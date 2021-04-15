@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ["https://p13-yh.herokuapp.com/", "127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
-    'movies.apps.MoviesConfig',
+    '../movies.apps.MoviesConfig',
     'users.apps.UsersConfig',
     'favorites.apps.FavoritesConfig',
     'django.contrib.admin',
