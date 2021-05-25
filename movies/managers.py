@@ -7,7 +7,7 @@ class ProductManager(models.Manager):
         the product searched and the one to substitue"""
         returning_request_user = []
         movie_id = None
-        movie_id_by_title = self.filter(movie_title__icontains=search_entry)
+        movie_id_by_title = self.filter(movie_title__icontains=search_entry).order_by('id_code')
         if movie_id_by_title:
             for element in movie_id_by_title:
                 return movie_id_by_title
