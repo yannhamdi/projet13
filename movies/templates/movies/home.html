@@ -32,9 +32,10 @@
     {{ form.as_p }}
     <input type="submit" value="Submit" />
 </form>
-<p><ul>
+<p>
 
                             {% if not user.is_authenticated  %}
+                            <ul>
                            <li> <a href="{% url 'signin' %}"> <i>Connectez vous</i></a></li>
                             <li> <a href="{% url 'signup' %}"> <i> Inscrivez vous</i></a></li>
                             {% endif %}
