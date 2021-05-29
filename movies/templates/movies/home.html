@@ -1,5 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %} HomePage MovieApp{% endblock title %}
  {% block header %}
 
@@ -29,8 +32,7 @@
     {{ form.as_p }}
     <input type="submit" value="Submit" />
 </form>
-<p>
-
+<p><ul>
 
                             {% if not user.is_authenticated  %}
                            <li> <a href="{% url 'signin' %}"> <i>Connectez vous</i></a></li>
@@ -38,7 +40,7 @@
                             {% endif %}
                             {% if user.is_authenticated  %}
                             <li> <a href="{% url 'account' %}"> <i> Information compte </i></a></li>
-                            <li> <a href="{% url 'signout' %}"><i> Deconnectez-vous</i></a></li>
+                            <li> <a href="{% url 'signout' %}"><i> Deconnectez-vous</i></a></li></ul>
                             
                             {% endif %}
  {% block content %}
