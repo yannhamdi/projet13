@@ -53,4 +53,11 @@
         </header>
         {% endblock header %}
 
-        
+        {% block content %}
+        <div class="email" style="height:500px; padding-top: 50px;padding-bottom: 50px;">
+            <div class="col-lg-12">
+         <h2 class="mail" style="color:black;">Votre adresse email est {{ user.email}}</h2>
+         <a href="{% url 'change_password' %}" class="mail" style="color:black;" >Change your password</a>
+     </div>
+ </div>
+        {% endblock content %}
