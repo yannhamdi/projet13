@@ -22,7 +22,7 @@
 {% endblock header %}
 
 {% block content %}
-  <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
+  <section class="page-section bg-primary" id="about">
                     <div class="row" style="margin-left: 15px;">
  {% for favorite in page_obj %}
                     <div class="results col-md-4 col-sm-6;">
@@ -34,7 +34,7 @@
  </div>
         
 {% empty %}
-         <h1 class=" mb-4 col-12 text-center" style="color: black;">Aucun article.</h1>
+         <h1 class=" mb-4 col-12 text-center" style="color: black;">Aucun film enregistré</h1>
                      {% endfor %} 
                     </div>
                     <div class="pagination">
