@@ -38,8 +38,9 @@
                             <ul>
                            <li> <a href="{% url 'signin' %}"> <i>Connectez vous</i></a></li>
                             <li> <a href="{% url 'signup' %}"> <i> Inscrivez vous</i></a></li>
-                            {% endif %}
+                            {% endif %} </ul>
                             {% if user.is_authenticated  %}
+                            <ul>
                             <li> <a href="{% url 'account' %}"> <i> Information compte </i></a></li>
                             <li> <a href="{% url 'signout' %}"><i> Deconnectez-vous</i></a></li></ul>
                             
