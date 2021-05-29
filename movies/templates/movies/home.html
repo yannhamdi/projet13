@@ -26,26 +26,8 @@
         </header>
         {% endblock header %}
 
-<ul>
- <form id="form" action="{% url 'search' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-</form>
-<p>
 
-                            {% if not user.is_authenticated  %}
-                            
-                           <li> <a href="{% url 'signin' %}"> <i>Connectez vous</i></a></li>
-                            <li> <a href="{% url 'signup' %}"> <i> Inscrivez vous</i></a></li>
-                            {% endif %} 
-                            {% if user.is_authenticated  %}
-                            <ul>
-                            <li> <a href="{% url 'account' %}"> <i> Information compte </i></a></li>
-                            <li> <a href="{% url 'signout' %}"><i> Deconnectez-vous</i></a></li>
-                            
-                            {% endif %}
-                        </ul>
+
  {% block content %}
         <section class="page-section bg-primary" id="about">
             <div class="container">
