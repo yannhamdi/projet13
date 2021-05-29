@@ -33,7 +33,7 @@
                         <p><a class=" mb-4" style="display: inline; color:  #47422c;" href="{% url 'lire' movie.id_code %}">{{movie.movie_title }}</a></p>
                         <p><img src= {{ movie.image_movie}}  alt="image" style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
                    
-                <h4 class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' movie.id_code %}"> 
+                <h4><a class="text-white-75 font-weight-light mb-5" href="{% url 'saving_search' movie.id_code %}"></a>
                   <button type="submit"> Sauvegardez </button> </h4> </div>
                 
                       {% else%} 
