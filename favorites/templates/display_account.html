@@ -22,17 +22,13 @@
 {% endblock header %}
 
 {% block content %}
-  <section class="page-section bg-primary" id="about">
-                    <div class="container-fluid" style="margin-left: 15px;">
- {% for favorite in page_obj %}
-                    <div class="results col-md-4 col-sm-6;">
-                           <h4> Titre </h4>
-                        <p><a  style="display:inline; color: #7d7772;"href="{% url 'lire' favorite.movie_saved.id_code %}" >{{favorite.movie_saved.movie_title }}</a>
-                       <p> <img src= {{ favorite.movie_saved.image_movie }}  alt="favoris" style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p>
-
-
- </div>
-        
+   <section class="page-section bg-primary" id="about" style=" width: 100%; padding:15px;">
+ <div class="row" style="margin-left: 15px;">
+     {% for favorite in page_obj %}
+      <div class="results col-md-4 col-sm-6">
+                          <h4> Titre film</h4>
+                        <p><a class=" mb-4" style="display: inline; color:  #47422c;" href="{%  url 'lire' favorite.movie_saved.id_code %}">{{favorite.movie_saved.movie_title }}</a></p>
+                        <p><img src= {{ favorite.movie_saved.image_movie}}  alt="image" style="height:100px; width:100px;border-radius: 10px; position: relative; z-index: 1"></p></div>
 {% empty %}
          <h1 class=" mb-4 col-12 text-center" style="color: black;">Aucun film enregistré</h1>
                      {% endfor %} 
@@ -42,6 +38,8 @@
                            {% if page_obj.has_previous %}
                             <a href="?page=1">&laquo; first</a>
                             <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                        </span>
+                    </div>
 {% endif %}
 
         <span class="current">
