@@ -1,6 +1,6 @@
-from django.db import models
+""" modules that creates user db"""
 from django.contrib.auth.models import AbstractUser
-from django.conf import settings
+
 
 
 class User(AbstractUser):

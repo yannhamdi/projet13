@@ -484,3 +484,105 @@ JavaScript error: http://localhost:64895/static/dist/css/styles.css, line 1: Syn
 
 ###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1622406077001	geckodriver	INFO	Listening on 127.0.0.1:65505
+1622406077906	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileOKqXj3"
+1622406078741	Marionette	INFO	Marionette enabled
+2021-05-30 20:21:20.095 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSButton: 0x131114000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.095 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSButton: 0x13ce1bc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.096 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSButton: 0x13ce19400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.097 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSButton: 0x13ce1a400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.098 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSButton: 0x13ce1fc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.098 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13ce1d000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:21:20.099 firefox-bin[71063:2461263] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13ce23c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622406081476	Marionette	INFO	Listening on port 65516
+1622406081497	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622406141500	geckodriver	INFO	Listening on 127.0.0.1:49463
+1622406142397	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofilepPDh6x"
+1622406142947	Marionette	INFO	Marionette enabled
+2021-05-30 20:22:24.199 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSButton: 0x12dc0a000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.200 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSButton: 0x13b2dc000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.201 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSButton: 0x13b2dd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.201 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSButton: 0x13b2de400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.202 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSButton: 0x112fa4800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.203 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13b2db000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:22:24.204 firefox-bin[71089:2462124] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13b3a1c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622406145507	Marionette	INFO	Listening on port 49476
+1622406145565	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:49462/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:49462/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:49462/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:49462/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+1622406148449	Marionette	INFO	Stopped listening on port 49476
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622406466661	geckodriver	INFO	Listening on 127.0.0.1:50896
+1622406466674	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileAJeaL1"
+1622406467204	Marionette	INFO	Marionette enabled
+2021-05-30 20:27:48.444 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSButton: 0x123ed9800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.444 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSButton: 0x1315e4800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.445 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSButton: 0x1315e3800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.446 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSButton: 0x1315e3000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.446 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSButton: 0x1315de400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.447 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1315e4400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:27:48.448 firefox-bin[71204:2467511] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1315e9c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622406469771	Marionette	INFO	Listening on port 50901
+1622406469847	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622406531431	geckodriver	INFO	Listening on 127.0.0.1:51231
+1622406531444	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileYQcVrw"
+1622406531963	Marionette	INFO	Marionette enabled
+2021-05-30 20:28:53.300 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSButton: 0x124ee4000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.301 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSButton: 0x1324e1800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.301 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSButton: 0x1324e3400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.302 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSButton: 0x1324e3800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.303 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSButton: 0x1324e1c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.303 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1324e6800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:28:53.304 firefox-bin[71229:2468692] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x1324ee800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622406534673	Marionette	INFO	Listening on port 51236
+1622406534730	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:51230/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:51230/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:51230/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:51230/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+1622406537809	Marionette	INFO	Stopped listening on port 51236
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1622406941282	geckodriver	INFO	Listening on 127.0.0.1:52959
+1622406941294	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileX9F9WT"
+1622406941834	Marionette	INFO	Marionette enabled
+2021-05-30 20:35:43.130 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSButton: 0x131150c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.131 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSButton: 0x13e5dec00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.131 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSButton: 0x13e5dd000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.132 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSButton: 0x131508c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.133 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSButton: 0x13e5db400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.133 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13e5d7400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:35:43.134 firefox-bin[71327:2472887] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x13e5e5000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622406944457	Marionette	INFO	Listening on port 52964
+1622406944556	Marionette	WARN	TLS certificate errors will be ignored for this session
+1622407047178	geckodriver	INFO	Listening on 127.0.0.1:53335
+1622407048201	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-foreground" "-no-remote" "-profile" "/var/folders/kh/q2n1bxz552d4rd7hrwklpp3c0000gn/T/rust_mozprofileB9GtYA"
+1622407048771	Marionette	INFO	Marionette enabled
+2021-05-30 20:37:30.145 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSButton: 0x12a8e0000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.146 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSButton: 0x137de6400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.147 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSButton: 0x137de5800>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.147 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSButton: 0x137de4000>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.148 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSButton: 0x137de5400>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.149 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137de5c00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+2021-05-30 20:37:30.149 firefox-bin[71377:2474835] Warning: Expected min height of view: (<NSPopoverTouchBarItemButton: 0x137dedc00>) to be less than or equal to 30 but got a height of 32.000000. This error will be logged once per view in violation.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1622407051373	Marionette	INFO	Listening on port 53342
+1622407051482	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://localhost:53334/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:53334/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:53334/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+JavaScript error: http://localhost:53334/static/dist/css/styles.css, line 1: SyntaxError: illegal character U+0040
+1622407055554	Marionette	INFO	Stopped listening on port 53342
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

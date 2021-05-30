@@ -1,14 +1,16 @@
+"""views for auuthentification"""
+
 from django.contrib.auth import login as auth_login
 from django.contrib import messages
 from django.contrib.auth import authenticate, logout, update_session_auth_hash
-from django.core.exceptions import ValidationError
 from django.contrib import auth
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 
-from .forms import SignUpForm, SignInForm
-from users.models import User
 from movies.forms import ProductSearch
+from users.models import User
+from .forms import SignUpForm, SignInForm
+
 
 
 def signup(request):
@@ -56,6 +58,7 @@ def account(request):
                   {'user_details': user_details, 'form': form})
 
 def change_password(request):
+    """views for changing password"""
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
@@ -63,11 +66,9 @@ def change_password(request):
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Your password was successfully updated!')
             return render(request, 'registration/password_changed.html')
-        else:
-            messages.error(request, 'Please correct the error below.')
+        messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'registration/change_password.html', {
         'form': form
     })
-
