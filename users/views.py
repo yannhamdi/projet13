@@ -58,7 +58,6 @@ def account(request):
                   {'user_details': user_details, 'form': form})
 
 def change_password(request):
-    """views for changing password"""
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
@@ -66,7 +65,8 @@ def change_password(request):
             update_session_auth_hash(request, user)  # Important!
             messages.success(request, 'Your password was successfully updated!')
             return render(request, 'registration/password_changed.html')
-        messages.error(request, 'Please correct the error below.')
+        else:
+            messages.error(request, 'Please correct the error below.')
     else:
         form = PasswordChangeForm(request.user)
     return render(request, 'registration/change_password.html', {
